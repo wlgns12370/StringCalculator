@@ -1,6 +1,4 @@
-package src.main;
-
-import static src.main.CalculatorUtil.isNegative;
+package src.main.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +27,18 @@ public class NumberList {
         return new NumberList(numberList);
     }
     
-    private static void checkNonNegative(Integer num) {
+    private static void checkNonNegative(final Integer num) {
         if (isNegative(num)) {
             Error e = new Error("음수가 입력되었습니다.");    
             throw new RuntimeErrorException(e);
         }
+    }
+
+    private static boolean isNegative(final Integer num) {
+        if (num < 0) {
+            return true;
+        }
+        return false;
     }
     
     public Integer calculateSum() {
@@ -42,5 +47,9 @@ public class NumberList {
             temp += integer;
         }
         return temp;
+    }
+
+    public List<Integer> getNumberList() {
+        return this.numberList;
     }
 }

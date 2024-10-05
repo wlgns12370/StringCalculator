@@ -1,4 +1,4 @@
-package src.main;
+package src.main.view;
 
 public class OutputView {
     public void view(Integer result) {

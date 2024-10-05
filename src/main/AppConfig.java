@@ -2,6 +2,10 @@ package src.main;
 
 import java.util.Scanner;
 
+import src.main.controller.CalculatorController;
+import src.main.view.InputView;
+import src.main.view.OutputView;
+
 public class AppConfig {
 
     public CalculatorController calculateController() {
